@@ -1,0 +1,364 @@
+* {
+  color: var(--primary-color-for-text);
+}
+
+button:hover {
+  background-color: transparent;
+}
+
+.containerTop {
+  background-color: dimgrey;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.containerGray {
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 103vh;
+  width: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+}
+
+.containerMain {
+  background-color: var(--primary-color-white);
+  height: 100vh;
+}
+
+.backVideo {
+  animation-duration: 5s;
+  min-width: 100%;
+  min-height: 103vh;
+  max-width: 500px;
+  max-height: 100vh;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+}
+
+.containerGlass {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: absolute;
+  width: auto;
+  max-width: 90vw;
+  z-index: 11;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem;
+  background: rgba(26, 22, 20, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(232, 78, 15, 0.5);
+  
+}
+
+
+.containerGlass p {
+  font-family: "Unbounded";
+  font-size: 16pt;
+  color: var(--primary-color-orange);
+}
+.mainLogoTitle {
+  color: var(--primary-color-orange);
+  font-size: clamp(32px, 10vw, 96pt);
+  font-family: Roboto;
+  font-weight: 900;
+  margin: 1rem;
+  text-align: center;
+}
+
+.containerAbout {
+  font-family: "Unbounded";
+  font-size: 20pt;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 40px 40px 0 4px;
+  position: relative;
+  z-index: 1001;
+  background-color: var(--primary-color-white);
+}
+
+.svg {
+  background-color: transparent;
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  -moz-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+}
+
+.containerContacts {
+  height: 50vh;
+  font-family: "Unbounded";
+  font-size: 20pt;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  background: var(--primary-color-white);
+}
+
+h2 {
+  margin-top: 1vh;
+}
+
+.heroInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 1vh;
+  margin-bottom: 56px;
+}
+
+.heroText {
+  font-size: 17px;
+  color: #444;
+  line-height: 1.75;
+  margin: 1vh;
+}
+
+.heroText strong {
+  font-weight: 500;
+}
+
+.heroStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.statCard {
+  background: var(--primary-color-orange-a-50);
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 24px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.statLabel {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.statValue {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.statSub {
+  font-size: 13px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.statSub.down {
+  color: #c0392b;
+}
+
+.statSub.up {
+  color: #27ae60;
+}
+
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 40px;
+}
+
+.tab {
+  padding: 12px 0;
+  margin-right: 32px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #aaa;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.tab::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color-orange);
+  transition: width 0.3s ease;
+}
+
+.tab:hover {
+  color: #666;
+}
+
+.tab.active {
+  font-weight: 500;
+  color: var(--primary-color-orange);
+}
+
+.tab.active::after {
+  width: 100%;
+}
+
+/* Content panels */
+.panel {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.panelGrid {
+  display: grid;
+  margin: 0 10rem 0 10rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.panelCard {
+  background: var(--primary-color-orange-a-50);
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.panelCard h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.panelCard p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.panelCard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.panelCard ul li {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+  padding: 6px 0;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.panelCard ul li:last-child {
+  border-bottom: none;
+}
+
+.panelCard ul li span {
+  font-weight: 500;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge.red {
+  background: #fde8e8;
+  color: #c0392b;
+}
+
+.badge.green {
+  background: #e8f5e9;
+  color: #27ae60;
+}
+
+.badge.gray {
+  background: #f0f0f0;
+  color: #777;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.riskGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.riskItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: var(--primary-color-white);
+  border-radius: 8px;
+}
+
+.riskItem p {
+  font-size: 14px;
+  color: #333;
+}
+
+.conclusion {
+  background: var(--primary-color-orange-a-50);
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 40px;
+  margin-top: 48px;
+}
+
+.conclusion h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.conclusion p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  max-width: 800px;
+}

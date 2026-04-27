@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  justify-self: center;
+  top: 1vh;
+  border-radius: 30px;
+  max-width: 70%;
+  min-width: 60%;
+  min-height: 4.5vh;
+  max-height: 4.5vh;
+  z-index: 99999;
+  background-color: rgba(232, 78, 15, 0.5);
+  padding: 0.2vh;
+}
+
+.buttonNav {
+  background-color: transparent;
+  width: 10vh;
+  transition:
+    color 0.2s ease,
+    font-size 0.2s ease;
+  margin: 0 2vh 0 2vh;
+  font-size: 14pt;
+  white-space: nowrap;
+  padding: 0;
+  color: var(--primary-color-white);
+}
+
+.buttonNav:hover {
+  background-color: transparent;
+  font-size: 15pt;
+  transition:
+    color 0.2s ease,
+    font-size 0.4s ease;
+}
+
+.buttonNav.active {
+  background-color: transparent;
+  font-size: 16pt;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  transition: all 0.2s;
+}
+
+.buttonNav.active:hover {
+  background-color: transparent;
+  color: var(--primary-color-white);
+  font-size: 16pt;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  transition: all 0.2s;
+}
+
+.buttonNavLogin {
+  padding: .3vh 1vh .3vh 1vh;
+  border: solid 1px;
+  background-color: transparent;
+  min-width: 176px;
+  margin-right: 1vh;
+  border-radius: 25px;
+  font-size: 14pt;
+  letter-spacing: 0.07em;
+}
+.buttonNavLogin:hover {
+  background-color: var(--primary-color-orange);
+}
+.left {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right {
+  display: flex;
+  justify-content: end;
+  width: 30%;
+}
+
+.imgNaLogin {
+  width: 37px;
+  padding-left: 0.5vh;
+}
