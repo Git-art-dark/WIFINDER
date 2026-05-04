@@ -3,6 +3,8 @@ import { React, useRef, useState } from "react";
 import NavBar from "../../components/NavBar/NavBar.jsx";
 
 import styles from "./HomePage.module.css";
+import ContactsSections from "../../components/ContactsSections/ContactsSections.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
 
 const HomePage = () => {
   const aboutRef = useRef(null);
@@ -136,7 +138,6 @@ const HomePage = () => {
               ))}
             </div>
 
-            {/* Panels */}
             {activeTab === "finance" && (
               <div className={styles.panel}>
                 <div className={styles.panelGrid}>
@@ -348,7 +349,6 @@ const HomePage = () => {
               </div>
             )}
 
-            {/* Conclusion */}
             <div className={styles.conclusion}>
               <h3>Выводы</h3>
               <p>
@@ -366,28 +366,31 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        <div className={styles.containerContacts}>
-          <svg
-            width="493"
-            height="14"
-            viewBox="0 0 493 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className={styles.svg}
-          >
-            <rect
+        <section id="contact" ref={contactRef}>
+          <div className={styles.containerContacts}>
+            <svg
               width="493"
               height="14"
-              rx="7"
-              transform="matrix(1 0 0 -1 0 14)"
-              fill="#e84d0f96"
-            />
-          </svg>
-          <section id="contact" ref={contactRef}>
-            <h2>Контакты</h2>
-          </section>
-        </div>
+              viewBox="0 0 493 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className={styles.svg}
+            >
+              <rect
+                width="493"
+                height="14"
+                rx="7"
+                transform="matrix(1 0 0 -1 0 14)"
+                fill="#e84d0f96"
+              />
+            </svg>
+              
+            <ContactsSections />
+          </div>
+        </section>
+        <Footer/>
       </div>
+      
     </>
   );
 };
